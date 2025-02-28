@@ -1,13 +1,15 @@
-import Link from 'next/link'
-import Image from 'next/image'
-import React from 'react'
-import CompaniesMarketplace from './../../public/logo.svg'
-import { auth } from '@/auth'
-import LoginButton from './LoginButton'
-import { logOut } from '../lib/authActions'
+'use client'
 
-const NavBar = async () => {
-  const session = await auth()
+import Image from 'next/image'
+import Link from 'next/link'
+import { useAuth } from '../hooks/useAuth'
+import CompaniesMarketplace from './../../public/logo.svg'
+import LoginButton from './LoginButton'
+import UserMenu from './UserMenu'
+
+const NavBar = () => {
+  const { session, loading } = useAuth()
+
   return (
     <header className='px-5 py-3 bg-blue-900 font-work-sans'>
       <nav className='flex justify-between items-center'>
@@ -21,20 +23,10 @@ const NavBar = async () => {
         </Link>
 
         <div className='flex items-center gap-4 text-white'>
-          {session && session?.user ? (
-            <>
-              <Link href='/business/create'>
-                <span>Add Business</span>
-              </Link>
-
-              <form action={logOut}>
-                <button type='submit'>Logout</button>
-              </form>
-
-              <Link href={`/user/${session?.user.id}`}>
-                <span>{session?.user.name}</span>
-              </Link>
-            </>
+          {loading ? (
+            <div>Loading...</div>
+          ) : session?.user ? (
+            <UserMenu user={session.user} />
           ) : (
             <LoginButton />
           )}
@@ -43,5 +35,4 @@ const NavBar = async () => {
     </header>
   )
 }
-
 export default NavBar

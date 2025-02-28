@@ -4,12 +4,12 @@ import { useState } from 'react'
 import { loginWithProvider } from '../lib/authActions'
 
 const LoginButton = () => {
-  const [isLoginCardOpen, setIsLiginCardOpen] = useState(false)
+  const [isLoginCardOpen, setIsLoginCardOpen] = useState(false)
 
   return (
     <>
       <button
-        onClick={() => setIsLiginCardOpen(true)}
+        onClick={() => setIsLoginCardOpen(true)}
         className='px-4 py-2 bg-white text-blue-900 rounded'
       >
         Login
@@ -18,7 +18,7 @@ const LoginButton = () => {
       {isLoginCardOpen && (
         <div className='fixed inset-0 flex items-center justify-center bg-black bg-opacity-50'>
           <div className='bg-white p-6 rounded-lg shadow-lg w-80'>
-            <h2 className='text-lg font-bold text-center mb-4'>Login</h2>
+            <h2 className='text-lg font-bold text-center text-gray-600  mb-4'>Login</h2>
 
             <button
               onClick={() => loginWithProvider('google')}
@@ -35,7 +35,7 @@ const LoginButton = () => {
             </button>
 
             <button
-              onClick={() => setIsLiginCardOpen(false)}
+              onClick={() => setIsLoginCardOpen(false)}
               className='w-full mt-4 text-sm text-gray-500 hover:underline'
             >
               Cancel
