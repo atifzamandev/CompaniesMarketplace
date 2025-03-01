@@ -8,9 +8,6 @@ interface SearchForm {
 }
 
 const SearchForm = ({ query }: SearchForm) => {
-  //const query = 'Test Query'
-  console.log(query)
-
   return (
     <Form action='/' scroll={false} className='search-form'>
       <input

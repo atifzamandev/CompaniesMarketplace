@@ -7,7 +7,7 @@ interface UserMenuProps {
   user: User
 }
 
-const UserMenu: React.FC<UserMenuProps> = ({ user }) => (
+const UserMenu = ({ user }: UserMenuProps) => (
   <>
     <Link href='/business/create'>
       <span>Add Business</span>
