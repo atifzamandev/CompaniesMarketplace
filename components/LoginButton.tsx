@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { loginWithProvider } from '../lib/authActions'
+import { loginWithProvider } from '../app/lib/authActions'
 
 const LoginButton = () => {
   const [isLoginCardOpen, setIsLoginCardOpen] = useState(false)

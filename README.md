@@ -14,3 +14,5 @@ The project is started from the scratch with the following tech stack
 - TypeScript: Adds type safety to the code and catches errors at compile time.
 - Supabase: For authentication and database management.
 - Tailwind: for styling.
+- ShadCN: for UI components.
+
