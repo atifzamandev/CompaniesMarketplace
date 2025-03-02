@@ -5,20 +5,21 @@ import { Button } from './ui/button'
 
 const BusinessCard = ({ business }: { business: BusinessInfo }) => {
   const {
-    _id,
-    companyName,
+    id,
+    company_name,
     description,
     price,
-    industryType,
+    industry_type,
     image,
-    sellerInfo: { _id: sellerId, name },
+    sellerInfo: { id: sellerId, name },
   } = business
+
   return (
     <>
       <li className='business-card group'>
         <div className='flex-between mt-2 gap-3'>
-          <Link href={`/business/${_id}`}>
-            <h3 className='text-26-semibold'>{companyName}</h3>
+          <Link href={`/business/${id}`}>
+            <h3 className='text-26-semibold'>{company_name}</h3>
           </Link>
 
           <data value={price} className='business-price'>
@@ -26,11 +27,11 @@ const BusinessCard = ({ business }: { business: BusinessInfo }) => {
           </data>
         </div>
 
-        <Link href={`/business/${_id}`}>
+        <Link href={`/business/${id}`}>
           <p className='business-card_desc'>{description}</p>
           <Image
             src={image ?? 'https://placehold.co/600x400'}
-            alt={companyName ?? 'Placeholder'}
+            alt={company_name ?? 'Placeholder'}
             className='business-card_img'
             width={600}
             height={400}
@@ -38,12 +39,12 @@ const BusinessCard = ({ business }: { business: BusinessInfo }) => {
         </Link>
 
         <div className='flex-between gap-3 mt-5'>
-          <Link href={`/?query=${industryType?.toLowerCase()}`}>
-            <p className='text-16-medium'>{industryType}</p>
+          <Link href={`/?query=${industry_type?.toLowerCase()}`}>
+            <p className='text-16-medium'>{industry_type}</p>
           </Link>
 
           <Button className='business-card_btn' asChild>
-            <Link href={`/business/${_id}`}> Details </Link>
+            <Link href={`/business/${id}`}> Details </Link>
           </Button>
         </div>
         <div className='flex-between mt-2 gap-3'>

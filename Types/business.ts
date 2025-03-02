@@ -1,16 +1,16 @@
 export interface SellerInfo {
-  _id: number
+  id: number
   name: string
   email: string
   phone: string
 }
 
 export interface BusinessInfo {
-  _id: number
-  companyName: string
+  id: number
+  company_name: string
   description: string
   price: string
-  industryType: string
+  industry_type: string
   image: string
   sellerInfo: SellerInfo
 }
