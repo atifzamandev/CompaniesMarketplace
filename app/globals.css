@@ -39,7 +39,7 @@
   }
 
   .text-14-normal {
-    @apply font-normal text-sm text-white-100/80;
+    @apply font-normal text-sm text-white;
   }
 
   .hero_container {
@@ -54,17 +54,33 @@
   .sub-heading {
     @apply font-medium text-[28px] text-white max-w-2xl text-center break-words;
   }
-  .search-form {
-    @apply max-w-3xl w-full min-h-[64px] bg-white border-[2px] border-black rounded-[12px] text-[24px] mt-8 px-5 flex flex-row items-center gap-5;
-  }
-  .search-input {
-    @apply bg-white  flex-1 font-bold placeholder:font-semibold  w-full h-auto outline-none;
+
+  .filter-container {
+    @apply bg-blue-50 border-[2px] border-blue-900 p-4 rounded-[8px];
   }
 
-  .search-btn {
-    @apply size-[48px] rounded-full bg-black flex justify-center items-center !important;
+  .filter-input {
+    @apply w-full px-4 py-2 bg-white border-2 border-blue-900 rounded-lg                                                             
+    text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500;
   }
 
+  .filter-select {
+    @apply w-full px-4 py-2 bg-white border-2 border-blue-900 rounded-lg                                                             
+    text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500;
+  }
+
+  .filter-label {
+    @apply block text-16-medium mb-2;
+  }
+
+  .filter-reset {
+    @apply w-full py-2 mt-4 bg-amber-600 text-white rounded-lg                                                                       
+      hover:bg-amber-700 transition-colors duration-200 font-medium text-[16px];
+  }
+
+  .filter-price-range {
+    @apply grid grid-cols-2 gap-2;
+  }
   .card_grid {
     @apply grid md:grid-cols-3 sm:grid-cols-2 gap-5;
   }

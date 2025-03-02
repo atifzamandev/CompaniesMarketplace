@@ -19,7 +19,7 @@ const BusinessCard = ({ business }: { business: BusinessInfo }) => {
       <li className='business-card group'>
         <div className='flex-between mt-2 gap-3'>
           <Link href={`/business/${id}`}>
-            <h3 className='text-26-semibold'>{company_name}</h3>
+            <h3 className='text-24-semibold'>{company_name}</h3>
           </Link>
 
           <data value={price} className='business-price'>
