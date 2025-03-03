@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Work_Sans, Roboto } from 'next/font/google'
+import { Roboto, Work_Sans } from 'next/font/google'
 import './globals.css'
 
 const workSans = Work_Sans({ subsets: ['latin'], variable: '--font-work-sans' })
@@ -21,9 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body
-        className={`${workSans.variable} ${roboto.variable}`}
-      >
+      <body className={`${workSans.variable} ${roboto.variable}`}>
         {children}
       </body>
     </html>

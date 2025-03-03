@@ -1,6 +1,6 @@
 'use client'
 
-import { PriceRange } from '@/Types/filters'
+import { PriceRange } from '@/types/filters'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { useDeferredValue, useEffect, useMemo, useState } from 'react'
 
@@ -56,7 +56,7 @@ const SearchFilter = ({ industries, priceRange }: SearchFilterProps) => {
     filters.maxPrice !== priceRange.max
 
   return (
-    <div className='bg-white/90 backdrop-blur-sm rounded-lg p-6 shadow-lg'>
+    <div className='bg-white/90 backdrop-blur-sm rounded-lg p-6 shadow-lg z-10'>
       <div className='grid grid-cols-1 md:grid-cols-4 gap-4'>
         <div className='md:col-span-2'>
           <input

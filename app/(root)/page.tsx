@@ -1,8 +1,8 @@
 import BusinessCard from '@/components/BusinessCard'
 import BusinessFilter from '@/components/SearchFilter'
-import { BusinessInfo } from '@/Types/business'
+import { BusinessInfo } from '@/types/business'
+import { FilterOptions } from '@/types/filters'
 import { createClient } from '../utils/supabase/server'
-import { FilterOptions } from '@/Types/filters'
 
 interface HomeProps {
   searchParams: FilterOptions
@@ -13,7 +13,7 @@ export default async function Home({ searchParams }: HomeProps) {
   const supabase = await createClient()
 
   const { data: companies } = await supabase
-    .from('company')
+    .from('companies')
     .select('industry_type, price')
     .not('industry_type', 'is', null)
     .not('price', 'is', null)
@@ -31,7 +31,7 @@ export default async function Home({ searchParams }: HomeProps) {
     { min: Infinity, max: -Infinity }
   ) || { min: 0, max: 0 }
 
-  let query = supabase.from('company').select('*, sellerInfo: seller_id(*)')
+  let query = supabase.from('companies').select('*, sellerInfo: seller_id(*)')
 
   if (params.query) {
     query = query.ilike('company_name', `%${params.query}%`)

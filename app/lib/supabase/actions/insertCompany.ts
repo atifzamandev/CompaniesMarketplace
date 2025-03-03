@@ -8,7 +8,7 @@ export async function insertCompany(formData: FormData) {
   const { company_name, description, price, industry_type, image, sellerId } =
     Object.fromEntries(formData)
 
-  const { data, error } = await supabase.from('company').insert([
+  const { data, error } = await supabase.from('companies').insert([
     {
       company_name,
       description,

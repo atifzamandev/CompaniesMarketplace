@@ -31,3 +31,14 @@ The project was built from scratch using the following tech stack:
 - Improved the search functionality by adding filters for query, price, and industry.
 - Refactored code for better efficiency and readability.
 - Enhanced UI styling for a more polished look.
+
+### Step 3
+
+-Code Refactor and updated user schema to handel user login.
+-Added business page details.
+-Added user profile page.
+-Other code refectoring and styling update.
+
+### Future Tasks
+
+-Add user pages from login details via github or google.

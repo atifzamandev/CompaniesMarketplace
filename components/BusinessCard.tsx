@@ -1,4 +1,4 @@
-import { BusinessInfo } from '@/Types/business'
+import { BusinessInfo } from '@/types/business'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from './ui/button'

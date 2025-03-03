@@ -1,8 +1,10 @@
-export interface SellerInfo {
+export interface UserInfo {
   id: number
   name: string
   email: string
   phone: string
+  image: string
+  user_type: 'buyer|seller'
 }
 
 export interface BusinessInfo {
@@ -12,5 +14,5 @@ export interface BusinessInfo {
   price: string
   industry_type: string
   image: string
-  sellerInfo: SellerInfo
+  sellerInfo: UserInfo
 }

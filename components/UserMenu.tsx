@@ -1,7 +1,6 @@
-import Link from 'next/link'
-import React from 'react'
-import { logOut } from '../app/lib/authActions'
 import { User } from '@supabase/supabase-js'
+import Link from 'next/link'
+import { logOut } from '../app/lib/authActions'
 
 interface UserMenuProps {
   user: User

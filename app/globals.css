@@ -104,6 +104,15 @@
   .business-card_btn {
     @apply rounded-full bg-amber-600 font-medium text-[16px] text-white px-5 py-3 !important;
   }
+  .error-container {
+    @apply flex flex-col items-center justify-center min-h-[60vh];
+  }
+  .error-heading {
+    @apply text-24-semibold text-red-600 mb-4;
+  }
+  .error-message {
+    @apply text-16-medium text-gray-600 mb-8;
+  }
 }
 
 @layer base {
