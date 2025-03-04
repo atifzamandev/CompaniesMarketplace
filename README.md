@@ -2,19 +2,34 @@
 
 ### A portal for buying and selling companies.
 
+Project is live at: [Click To Visit Companies Marketplace](https://companies-marketplace-1siky75d3-atif-zamans-projects.vercel.app/)
+
 ## Project overview
 
-The purpose of this project is to create a marketplace for i buying and selling companies. Guest user can view companies, search them and users can add companies.
+The purpose of this project is to create a marketplace for buying and selling companies. Guest user can view companies, search them and users can add companies.
 
 ### Initial Project Setup
 
 The project was built from scratch using the following tech stack:
 
 - Next.js – For app routing and server-side rendering.
+- React 19 - Utilized some latest feature from react 19.
 - TypeScript – Adds type safety to the code and helps catch errors at compile time.
 - Supabase – Handles authentication and database management.
 - Tailwind CSS – For styling.
 - ShadCN – Provides UI components.
+
+## Features
+
+- Business UI Card
+- Search and Filtre Functionality
+- Business Details
+- User Signup and Login
+- Authentication with Google and GitHub.
+- Login User To Add Business
+- All the data is stored in Supabase Tables
+- Clean and Responsive Interface
+- Deployed to vercel using CI/CD
 
 ## Project Steps
 
@@ -51,6 +66,12 @@ The project was built from scratch using the following tech stack:
 ### Future Tasks
 
 - Add option to create user as a buyer.
+- Profile optimization for buyer and seller sepration. Only seller can add bussines and only buyer can show expression of interest.
+- Secure profiles based on users roles for visibility
 - Fetch user profile image and save other details from social logins.
-- Add expression of interest feature and save to database (clarification needed on what details should be included with expressions of interest, such as price quotes).
-- Need more details about the business process of company sale and purchase to implement properly.
+- Add expression of interest feature and save to database.
+- Need more details about the business process of a company sale and purchase to implement properly.
+
+## Conclusion
+
+The project demonstrates a comprehensive implementation of a Next.js application, showcasing both server-side rendering (SSR) and client-side rendering (CSR) while leveraging advanced App Router features. The platform provides a robust marketplace for buying and selling companies. Developed advanced search functionality with multi-dimensional filtering. Created a secure authentication system with comprehensive user workflows
