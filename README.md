@@ -21,10 +21,10 @@ The project was built from scratch using the following tech stack:
 ### Step 1
 
 - Completed the initial project setup.
-- Implemented Supabase authentication using google and github.
+- Implemented Supabase authentication using Google and GitHub.
 - Created a hero section with search functionality.
 - Developed business cards to display a list of companies.
-- Initially used dummy data, then integrated Supabase to fetch company data from database.
+- Initially used dummy data, then integrated Supabase to fetch company data from the database.
 
 ### Step 2
 
@@ -34,11 +34,23 @@ The project was built from scratch using the following tech stack:
 
 ### Step 3
 
--Code Refactor and updated user schema to handel user login.
--Added business page details.
--Added user profile page.
--Other code refectoring and styling update.
+- Refactored code and updated user schema to handle user login.
+- Added business page details.
+- Added user profile page.
+- Performed additional code refactoring and styling updates.
+
+### Step 4
+
+- Redesigned Add Business page where sellers can list their companies.
+
+### Step 5
+
+- User signup system created. Users can register and must complete email verification.
+- After email verification, users can login and add businesses.
 
 ### Future Tasks
 
--Add user pages from login details via github or google.
+- Add option to create user as a buyer.
+- Fetch user profile image and save other details from social logins.
+- Add expression of interest feature and save to database (clarification needed on what details should be included with expressions of interest, such as price quotes).
+- Need more details about the business process of company sale and purchase to implement properly.

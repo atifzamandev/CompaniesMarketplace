@@ -1,7 +1,7 @@
 'use client'
 
 import { Session } from '@supabase/supabase-js'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useCallback } from 'react'
 import { createClient } from '../utils/supabase/client'
 
 export function useAuth() {
@@ -9,11 +9,16 @@ export function useAuth() {
   const [loading, setLoading] = useState(true)
   const supabase = createClient()
 
+  const refresh = useCallback(async () => {
+    const {
+      data: { session },
+    } = await supabase.auth.getSession()
+    setSession(session)
+    setLoading(false)
+  }, [supabase.auth])
+
   useEffect(() => {
-    supabase.auth.getSession().then(({ data: { session } }) => {
-      setSession(session)
-      setLoading(false)
-    })
+    refresh()
 
     const {
       data: { subscription },
@@ -23,7 +28,7 @@ export function useAuth() {
     })
 
     return () => subscription.unsubscribe()
-  }, [supabase.auth])
+  }, [supabase.auth, refresh])
 
-  return { session, loading }
+  return { session, loading, refresh }
 }
