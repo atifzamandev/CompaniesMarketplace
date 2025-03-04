@@ -1,8 +1,8 @@
 export interface FilterOptions {
-  query: string
-  industry: string
-  minPrice: number
-  maxPrice: number
+  query?: string
+  industry?: string
+  minPrice?: string
+  maxPrice?: string
 }
 
 export interface PriceRange {

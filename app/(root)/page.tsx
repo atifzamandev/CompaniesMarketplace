@@ -4,11 +4,11 @@ import { BusinessInfo } from '@/types/business'
 import { FilterOptions } from '@/types/filters'
 import { createClient } from '../utils/supabase/server'
 
-interface HomeProps {
-  searchParams: FilterOptions
-}
-
-export default async function Home({ searchParams }: HomeProps) {
+export default async function Home({
+  searchParams,
+}: {
+  searchParams: Promise<FilterOptions>
+}) {
   const params = await Promise.resolve(searchParams)
   const supabase = await createClient()
 
