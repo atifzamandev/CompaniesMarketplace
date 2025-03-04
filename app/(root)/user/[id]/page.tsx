@@ -31,11 +31,14 @@ export default async function UserProfilePage({
        sellerInfo:marketplace_users (                                                                                                 
          id,                                                                                                                          
          name,                                                                                                                        
-         email                                                                                                                        
+         email,
+         image                                                                                                                        
        )                                                                                                                              
      `
     )
     .eq('seller_id', user.id)
+
+  const sellerImage = user.image || 'https://placehold.co/128x128'
 
   if (businessError) {
     console.error('Error fetching businesses:', businessError)
@@ -46,7 +49,7 @@ export default async function UserProfilePage({
       <section className='hero_container !min-h-[240px]'>
         <div className='flex flex-col items-center gap-4'>
           <Image
-            src='https://placehold.co/128x128'
+            src={sellerImage}
             alt={user.name}
             width={128}
             height={128}

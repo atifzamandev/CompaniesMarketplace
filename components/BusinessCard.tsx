@@ -11,8 +11,10 @@ const BusinessCard = ({ business }: { business: BusinessInfo }) => {
     price,
     industry_type,
     image,
-    sellerInfo: { id: sellerId, name },
+    sellerInfo: { id: sellerId, name, image: sellerImage },
   } = business
+
+  const sellerImageUrl = sellerImage || 'https://placehold.co/48x48'
 
   return (
     <>
@@ -54,7 +56,7 @@ const BusinessCard = ({ business }: { business: BusinessInfo }) => {
 
           <Link href={`/user/${sellerId}`}>
             <Image
-              src='https://placehold.co/48x48'
+              src={sellerImageUrl}
               alt='Placeholder'
               width={48}
               height={48}

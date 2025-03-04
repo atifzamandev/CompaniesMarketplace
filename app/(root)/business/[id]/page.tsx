@@ -29,7 +29,6 @@ export default async function BusinessDetailPage({
   if (error || !business) {
     return notFound()
   }
-  console.log('business', business)
   return (
     <>
       <section className='hero_container !min-h-[340px]'>
