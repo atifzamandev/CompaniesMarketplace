@@ -2,11 +2,7 @@ import { User } from '@supabase/supabase-js'
 import Link from 'next/link'
 import { logOut } from '../app/lib/authActions'
 
-interface UserMenuProps {
-  user: User
-}
-
-const UserMenu = ({ user }: UserMenuProps) => (
+const UserMenu = ({ user }: { user: User }) => (
   <>
     <Link href='/business/create'>
       <span>Add Business</span>

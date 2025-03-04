@@ -57,7 +57,7 @@ const BusinessCard = ({ business }: { business: BusinessInfo }) => {
           <Link href={`/user/${sellerId}`}>
             <Image
               src={sellerImageUrl}
-              alt='Placeholder'
+              alt={name ?? 'Placeholder'}
               width={48}
               height={48}
               className='rounded-full'

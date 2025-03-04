@@ -1,5 +1,6 @@
 import { createClient } from '@/app/utils/supabase/server'
 import { Button } from '@/components/ui/button'
+import { HeartIcon } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
@@ -19,12 +20,15 @@ export default async function BusinessDetailPage({
        seller:marketplace_users (                                                                                                     
          id,                                                                                                                     
          name,                                                                                                                        
-         email                                                                                                                        
+         email,
+         image                                                                                                                        
        )                                                                                                                              
      `
     )
     .eq('id', (await params).id)
     .single()
+
+  const sellerImageUrl = business.seller.image || 'https://placehold.co/64x64'
 
   if (error || !business) {
     return notFound()
@@ -52,8 +56,8 @@ export default async function BusinessDetailPage({
               className='flex gap-2 items-center mb-3'
             >
               <Image
-                src='https://placehold.co/64x64'
-                alt='avatar'
+                src={sellerImageUrl}
+                alt={business.seller.name ?? 'avatar'}
                 width={64}
                 height={64}
                 className='rounded-full drop-shadow-lg'
@@ -84,7 +88,7 @@ export default async function BusinessDetailPage({
           <div className='flex gap-4 mt-8'>
             <Button className='business-card_btn' asChild>
               <Link href={`/contact/${business.seller.user_id}`}>
-                Contact Seller
+                Express Interest <HeartIcon className='size-12 text-white' />
               </Link>
             </Button>
 
