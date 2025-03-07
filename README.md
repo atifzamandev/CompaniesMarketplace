@@ -2,7 +2,7 @@
 
 ### A portal for buying and selling companies.
 
-Project is live at: [Click To Visit Companies Marketplace](https://companies-marketplace-1siky75d3-atif-zamans-projects.vercel.app/)
+Project is live at: [Click To Visit Companies Marketplace](https://companies-marketplace.vercel.app/)
 
 ## Project overview
 
